@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Tintorería Les Corts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fondo-azul">
+
+  <!-- Barra superior -->
+  <header class="navbar">
+    <div class="logo">Tintorería Les Corts</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="https://wa.me/34640730599" target="_blank" class="whatsapp">WhatsApp</a>
+    </nav>
+  </header>
+
+  <section class="lista-servicios">
+    <h2>Nuestros servicios</h2>
+
+    <!-- Servicio 1 -->
+    <div class="contenido-servicio">
+      <h3>Neteja en sec</h3>
+      <img src="imagenes/sec.jpg" alt="Neteja en sec">
+      <p>Limpieza en seco para prendas delicadas que no pueden lavarse con agua. Conserva los tejidos y alarga la vida de tu ropa.</p>
+      <button onclick="pedirCita('Neteja en sec')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 2 -->
+    <div class="contenido-servicio">
+      <h3>Rentat amb aigua</h3>
+      <img src="imagenes/agua.jpg" alt="Rentat amb aigua">
+      <p>Lavado con agua para prendas cotidianas, garantizando limpieza y frescor con el máximo cuidado.</p>
+      <button onclick="pedirCita('Rentat amb aigua')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="contenido-servicio">
+      <h3>Planxat professional</h3>
+      <img src="imagenes/planchado.jpg" alt="Planxat">
+      <p>Plancha profesional para mantener tus prendas impecables, sin arrugas y listas para vestir.</p>
+      <button onclick="pedirCita('Planxat professional')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 4 -->
+    <div class="contenido-servicio">
+      <h3>Tractament de taques difícils</h3>
+      <img src="imagenes/manchas.jpg" alt="Tractament de taques">
+      <p>Eliminación de manchas difíciles con productos especializados que respetan los tejidos.</p>
+      <button onclick="pedirCita('Tractament de taques difícils')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 5 -->
+    <div class="contenido-servicio">
+      <h3>Servei exprés 24h</h3>
+      <img src="imagenes/expres.jpg" alt="Servei exprés">
+      <p>Servicio rápido en menos de 24 horas para ocasiones especiales donde no puedes esperar.</p>
+      <button onclick="pedirCita('Servei exprés 24h')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 6 -->
+    <div class="contenido-servicio">
+      <h3>Neteja de peces especials</h3>
+      <img src="imagenes/especial.jpg" alt="Neteja de peces especials">
+      <p>Tratamiento especial para vestidos de novia, trajes de fiesta, uniformes y prendas con valor sentimental.</p>
+      <button onclick="pedirCita('Neteja de peces especials')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 7 -->
+    <div class="contenido-servicio">
+      <h3>Tèxtils de la llar</h3>
+      <img src="imagenes/hogar.jpg" alt="Tèxtils de la llar">
+      <p>Limpieza de cortinas, edredones, colchas y otros textiles del hogar con resultados impecables.</p>
+      <button onclick="pedirCita('Tèxtils de la llar')">Reservar cita</button>
+    </div>
+
+    <!-- Servicio 8 -->
+    <div class="contenido-servicio">
+      <h3>Servei a domicili</h3>
+      <img src="imagenes/domicilio.jpg" alt="Servei a domicili">
+      <p>Recogida y entrega de tus prendas en casa o en tu negocio para mayor comodidad.</p>
+      <button onclick="pedirCita('Servei a domicili')">Reservar cita</button>
+    </div>
+  </section>
+
+  <!-- Modal de cita -->
+  <div id="modalCita" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2>Pedir cita: <span id="servicioSeleccionado"></span></h2>
+      <form id="formCita" onsubmit="guardarCita(event)">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label>Teléfono o Email:</label>
+        <input type="text" id="contacto" required>
+        <label>Fecha y hora:</label>
+        <input type="datetime-local" id="fechaHora" required>
+        <button type="submit">Reservar cita</button>
+      </form>
+      <p id="mensajeError" style="color:red;"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tintorería Les Corts</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
